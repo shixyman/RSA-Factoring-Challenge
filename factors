@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 from sys import argv
 from math import sqrt
 
@@ -11,10 +12,10 @@ def factor():
             if num % 2 == 0:
                 print("{}*2".format(num//2))
                 continue
-            sqrt_n = int(sqrt(num))
-            if sqrt_n % 2 == 0:
-                sqrt_n += 1
-            for i in range(3, sqrt_n + 1, 2):
+            sqn = int(sqrt(num))
+            if sqn % 2 == 0:
+                sqn += 1
+            for i in range(3, sqn + 1, 2):
                 if num % i == 0:
                     print("{}*{}".format(i, num//i))
                     break
